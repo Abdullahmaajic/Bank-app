@@ -1,0 +1,174 @@
+<!-- <div class="text mt-5">
+  <h3 style="margin-left: 275px;">LOAN CALCULATOR</h3>
+</div> -->
+<div class="container text-center mt-5 mb-5">
+  <div class="row">
+    <div class="col-6">
+      <div class="card shadow" style="margin: 0 auto;">
+        <div>
+          <form class="form-control form-align">
+            <legend>LOAN CALCULATOR</legend>
+            <div>
+              <label>Principle amount</label> <br />
+              <input type="text" class="form-inline" #amount />
+            </div>
+            <div>
+              <label>Number of years</label><br>
+              <input type="text" class="form-inline" #years />
+            </div>
+            <div>
+              <label>Type of loan</label><br>
+              <select (change)="typeRate(rate.value)" #rate>
+                <option value="6">Car loan</option>
+                <option value="8">House loan</option>
+                <option value="10">Personal loan</option>
+              </select>
+            </div>
+            <div>
+              <label>Rate of interest</label><br>
+              <input type="text" value="{{ typeOfRate }}" class="form-inline" #interest /> <br>
+            </div>
+            <br />
+            <div>
+              <label>E M I</label><br /><input class="form-inline" type="text" value="{{ emi }}" />
+            </div>
+            <div>
+              <label>Total amount payable</label><br>
+              <input type="text" value="{{ totalAmount }}" class="form-inline" />
+            </div>
+            <div class="button-align row">
+              <div class="col-4">
+                <input type="button" value="Calculate" class="form-inline btn btn-success"
+                  (click)="calculateAll(amount.value, years.value)" />
+              </div>
+              <div class="col-4">
+                <input type="reset" value="Reset" class="form-inline btn btn-danger" />
+              </div>
+              <div class="col-4">
+                <!-- <input type="button"  class="btn-primary" [routerLink]="['','loan','payment']"> -->
+                <!-- Button trigger modal -->
+                <button type="button" value="payment" class=" btn btn-primary" data-bs-toggle="modal"
+                  data-bs-target="#exampleModal">
+                  Payment
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade payment" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Payment</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form action="">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-6 label-align">
+                                <select name="" id="" #mode (change)="pay(mode.value)" class="mb-3">
+                                  <option value="">MODE OF PAYMENT</option>
+                                  <option value="Enter the phone number">PHONE NO</option>
+                                  <option value="Enter the Acc number">ACC NO</option>
+                                  <option value="Enter the UPI ID">UPI</option>
+                                </select>
+                                <p>{{ paymentType }}</p>
+                                <input type="text" class="mb-3" #payment /><br><input type="button" value="Verify"
+                                  (click)=check(payment.value)><br>
+                                <label class="mb-3">Total amount</label><input type="text" class="mb-3"
+                                  value={{totalPayment}}>
+                                <label class="mb-3">Amount to pay</label>
+                                <input type="text" class="mb-3" placeholder="Enter the amount to be paid" #topay />
+                                <!-- <label class = "mb-3">Remaining Balance</label><input type="text" class = "mb-3" value = {{remaining}}> -->
+                                <div class="mb-3 row">
+                                  <div class="col-6">
+                                    <input type="button" class="btn" style="width: 110px; background-color: rgb(0, 128, 85);color: white;margin: 10px 40px;"
+                                      value="PAY" (click)="paydone(topay.value)">
+                                  </div>
+                                  <div class="col-6">
+                                    <input type="reset" class="btn"
+                                      style="width: 110px;background-color: rgb(194, 22, 74);color: white;margin: 10px 150px;" value="RESET">
+                                  </div>
+                                </div>
+                                <div>
+                                  <h5>{{paymentSuccess}}</h5>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <!-- <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+
+                <!-- modal -->
+                <div>
+                  <div class="modal-dialog modal-dialog-centered">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <router-outlet></router-outlet>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="">
+        <p class="mt-5" style="font-size: 22px;font-weight: 600;">A loan is a form of debt incurred by an individual or
+          other entity. The lender—usually a
+          corporation, financial institution, or government—advances a sum of money to the borrower. In return, the
+          borrower agrees to a certain set of terms including any finance charges, interest, repayment date, and other
+          conditions.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <h1 class="text-bolder text-center mt-3">Type of Loans</h1>
+    <div class="row mt-3">
+      <div class="col-4">
+        <div class="card shadow mt-3 mb-3">
+          <img src="../../assets/images/car-loans.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Car Loans</h5>
+            <p class="card-text">Car loan is a financial assistance taken to purchase a car with minimal initial payment
+              from your own pocket.</p>
+            <a href="#" class="btn btn-primary">Go</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card shadow mt-3 mb-3">
+          <img src="../../assets/images/home-loan-1.jpg" class="card-img-top" alt="..." style="height: 188px;">
+          <div class="card-body">
+            <h5 class="card-title">Home Loans</h5>
+            <p class="card-text">In simple terms, a home loan is a loan taken to buy or construct a new home -i.e. the
+              property is not owned by the loan applicant.</p>
+            <a href="#" class="btn btn-primary">Go</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card shadow mt-3 mb-3">
+          <img src="../../assets/images/personal-loan.png" class="card-img-top" alt="..." style="height: 188px;">
+          <div class="card-body">
+            <h5 class="card-title">Personal Loans</h5>
+            <p class="card-text">Personal Loan is an unsecured credit provided by financial institutions based on
+              criteria like income level, credit history etc..</p>
+            <a href="#" class="btn btn-primary">Go </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

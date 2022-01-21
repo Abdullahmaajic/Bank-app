@@ -1,0 +1,13 @@
+.logo-img {
+  width: 110px;
+}
+.navbar .btn-primary {
+  color: #fff;
+  padding: 10px 30px;
+  margin: 0px 20px;
+  border-radius: 5px 25px;
+  font-size: 1p4x;
+}
+.navbar .btn-primary:hover{
+  background-color: rgb(9, 9, 121);
+}

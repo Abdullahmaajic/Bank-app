@@ -1,0 +1,31 @@
+<section>
+  <div id="check">
+    <div class="container text-center">
+      <div class="row mt-5 mb-5">
+        <div class="col-6">
+          <div class="card">
+            <div>
+              <select name="" id="" #mode (change)="pay(mode.value)" class="mt-2 mb-3">
+                <option value="">MODE OF PAYMENT</option>
+                <option value="Enter the phone number">PHONE NO</option>
+                <option value="Enter the Acc number">ACC NO</option>
+                <option value="Enter the UPI ID">UPI</option>
+              </select>
+              <p>{{ paymentType }}</p>
+            </div>
+            <div><input type="text" class="mb-3" #payment /></div>
+            <div><input type="button" value="Verify" (click)=check(payment.value)>
+              <p class="text-success">{{verified}}</p>
+            </div>
+            <div><label class="mb-3">Remaining Balance</label>
+            </div>
+            <div><input type="text" class="mb-3" value="{{ remaining }}" />
+            </div>
+            <div><input type="button" value="Check balance" (click)="checkbalance(payment.value)" />
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

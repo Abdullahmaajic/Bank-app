@@ -1,0 +1,14 @@
+
+
+.card{
+  width: 500px;
+}
+#new-acc input{
+  width: 400px;
+height: 40px;
+border-radius: 10px;
+text-align: center;
+}
+.offcanvas{
+  height: 400px;
+}

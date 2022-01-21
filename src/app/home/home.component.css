@@ -1,0 +1,10 @@
+
+.carousel-inner img{
+  height: 350px;
+}
+marquee {
+  background-color: #0A58CA;
+  font-size: 20px;
+  color: gainsboro;
+  height: 28px;
+}

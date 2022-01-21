@@ -1,0 +1,128 @@
+<div class="container text-center mt-3" id="new-acc">
+  <div class="row">
+    <div class="col-6">
+      <form class="card form-align">
+        <div>
+          <label>Name</label> <br />
+          <input type="text" class="form-inline" placeholder="Enter name" #name />
+        </div>
+        <div>
+          <label>Phone number</label><br>
+          <input type="text" class="form-inline" placeholder="Enter Mobile Number" #phone />
+        </div>
+        <div>
+          <label>Account Number</label><br>
+          <input type="text" class="form-inline" placeholder="Enter Acc No" #acc /> <br>
+        </div>
+        <div>
+          <label>UPI ID</label><br>
+          <input type="text" class="form-inline" placeholder="UPIid@ybl" #upi /> <br>
+        </div>
+        <div>
+          <label>Initial Balance</label><br /><input class="form-inline" type="text" placeholder="Initial Balance"
+            #initial />
+        </div>
+        <div>
+          <label>Reamaining balance</label><br>
+          <input type="text" class="form-inline" placeholder="Remaining Balance" #remaining />
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="button-align mt-3">
+              <input type="button" value="Create" class="btn btn-success p-2" style="width: 100px;"
+                (click)=create(name.value,phone.value,acc.value,upi.value,initial.value,remaining.value) />
+            </div>
+          </div>
+          <div class="col-6">
+            <input type="reset" value="Reset" class="button-reset p-2 btn btn-danger"
+              style="width: 100px;  margin: 17px;" />
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <img src="../../assets/images/mobile-bank-2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title">Mobile Banking</h3>
+          <p class="card-text">Create your own Account from a minutes away using your mobile.</p>
+          <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
+            aria-controls="offcanvasTop">More..</button>
+
+          <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+            <div class="offcanvas-header">
+              <h5 id="offcanvasTopLabel">Mobile Banking</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <p style="font-size: 20px;">Mobile banking is the act of making financial transactions on a mobile device
+                (cell phone, tablet, etc.). This activity can be as simple as a bank sending fraud or usage activity to
+                a client's cell phone or as complex as a client paying bills or sending money abroad.</p>
+
+              <br>
+              <p style="font-size: 20px;">Online banking refers to any transaction that is conducted over the internet,
+                usually through your banking provider's website. ... A mobile banking app usually allows you to access
+                similar, (although sometimes slightly fewer), features that you would find when online banking, but it
+                must be done on a smartphone or tablet.</p>
+              <br>
+              <p style="font-size: 20px;">Mobile banking allows you to perform many of the same activities as online
+                banking using a smartphone or tablet instead of a desktop computer. However, simply accessing the bank's
+                website on a mobile device is not the only method of mobile banking. ... Logging into a bank's mobile
+                website. Using a mobile banking app.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <img src="../../assets/images/home-loan-1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title">Easy Loan Apply</h3>
+          <p class="card-text">Apply for your success through mobile.</p>
+          <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
+            aria-controls="offcanvasTop">More..</button>
+
+          <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+            <div class="offcanvas-header">
+              <h5 id="offcanvasTopLabel">Offcanvas top</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <p style="font-size: 20px;">What is a loan application? A loan application is used by borrowers to apply
+                for a loan. Through the loan application, borrowers reveal key details about their finances to the
+                lender. The loan application is crucial to determining whether the lender will grant the request for
+                funds or credit.</p>
+              <br>
+              <ul>
+                <li>Home Loan</li>
+                <li>Business Loan</li>
+                <li>Vehicle Loan</li>
+                <li>Personal Loan</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--  -->
+
+
+<div>
+  <div class="container mt-5">
+    <div class="row">
+      <h1 class="text-center mt-4">Services Provided</h1>
+      <div class="row">
+        <div class="col-3">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
